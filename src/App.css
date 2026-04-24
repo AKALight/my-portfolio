@@ -70,3 +70,190 @@
 
 .fade-in { animation: simpleFade 0.3s ease-in-out; }
 @keyframes simpleFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* Mobile Navigation */
+  .global-nav {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    gap: 1rem;
+    z-index: 1000;
+  }
+
+  .global-nav a {
+    font-size: 0.8rem;
+  }
+
+  .contact-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    z-index: 1000;
+  }
+
+  /* Mobile Panels */
+  .left-panel {
+    width: 100%;
+    padding: 6rem 2rem 2rem 2rem;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .projects-full-width {
+    padding-top: 6rem;
+  }
+
+  .right-panel {
+    display: none; /* Hide the black panel on mobile */
+  }
+
+  /* Mobile Typography */
+  .hero-text {
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem; /* Fixed size instead of vw for mobile */
+    letter-spacing: -2px;
+  }
+
+  .hero-text h3 {
+    font-size: 1rem;
+  }
+
+  .content-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-paragraph {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Mobile Skills */
+  .skills-grid {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Mobile Projects */
+  .projects-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .action-btn {
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile Modal */
+  .modal-content {
+    padding: 2rem;
+    margin: 1rem;
+    max-width: none;
+    width: calc(100% - 2rem);
+  }
+
+  .modal-header h2 {
+    font-size: 2rem;
+  }
+
+  .modal-icons {
+    gap: 1.5rem;
+  }
+
+  .modal-icon-link {
+    font-size: 1rem;
+    gap: 1rem;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-nav {
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .logo {
+    top: 0.8rem;
+    left: 0.8rem;
+    font-size: 1.3rem;
+  }
+
+  .left-panel {
+    padding: 5rem 1.5rem 2rem 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.8rem;
+  }
+}
