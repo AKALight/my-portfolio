@@ -1,0 +1,72 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.container { position: relative; width: 100vw; height: 100vh; display: flex; background: #e2e4e5; overflow: hidden; }
+
+/* --- Global Navigation --- */
+.global-nav { position: absolute; top: 3rem; right: 4rem; display: flex; gap: 2.5rem; align-items: center; z-index: 100; }
+.global-nav a { color: #fff; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: text-shadow 0.3s ease, color 0.3s ease; }
+.global-nav a:hover { text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); }
+
+.contact-btn { background: #fff; color: #000; border: none; padding: 0.6rem 1.8rem; border-radius: 25px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.3s ease; }
+.contact-btn:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); transform: translateY(-2px); }
+
+/* Inverts nav colors when background is gray (projects tab) */
+.nav-dark-text a { color: #000; }
+.nav-dark-text a:hover { text-shadow: 0 0 12px rgba(0, 0, 0, 0.3); }
+.nav-dark-text .contact-btn { background: #000; color: #fff; }
+.nav-dark-text .contact-btn:hover { box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+/* --- Panels --- */
+.left-panel { width: 50%; padding: 4rem; display: flex; flex-direction: column; justify-content: center; z-index: 10; transition: width 0.3s ease; }
+
+/* Forces left panel to center screen when projects tab hides the black screen */
+.projects-full-width { width: 100%; align-items: center; padding-top: 8rem; }
+
+.logo { font-weight: 900; font-size: 2rem; position: absolute; top: 2rem; left: 4rem; z-index: 100; }
+
+.right-panel { position: absolute; top: 0; right: 0; width: 58%; height: 100%; background: #000; clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%); z-index: 1; }
+.image-wrapper { position: absolute; bottom: 0; right: 15%; height: 85%; }
+.image-wrapper img { height: 100%; object-fit: cover; }
+
+/* --- Typography & Text Blocks --- */
+.hero-text { display: flex; flex-direction: column; gap: 1.25rem; }
+.hero-text h2 { font-size: 1.6rem; color: #000; font-weight: 400; margin: 0; }
+.hero-text h1 { font-size: 4vw; color: #000; margin: 0; letter-spacing: -3px; line-height: 1.1; font-weight: 900; }
+.hero-text h3 { font-size: 1.25rem; color: #717171; font-weight: 500; margin: 0; }
+
+.content-section { display: flex; flex-direction: column; gap: 1.5rem; max-width: 80%; }
+.section-title { font-size: 3rem; font-weight: 900; color: #000; letter-spacing: -1px; }
+.section-paragraph { font-size: 1.1rem; color: #444; line-height: 1.8; font-weight: 500; }
+
+.skills-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; }
+.skill-tag { background: #fff; color: #000; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+/* --- Projects Section --- */
+.projects-container { width: 100%; max-width: 1000px; display: flex; flex-direction: column; gap: 2rem; }
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; width: 100%; }
+.project-card { background: #fff; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
+.category-title { font-size: 1.8rem; color: #000; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+
+.button-row { display: flex; gap: 1rem; margin-top: auto; }
+.action-btn { background: #000; color: #fff; padding: 0.6rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform 0.2s ease, background 0.2s ease; }
+.action-btn:hover { background: #333; transform: translateY(-2px); }
+
+.project-item { margin-bottom: 1.5rem; }
+.project-item h4 { font-size: 1.1rem; color: #000; margin-bottom: 0.3rem; }
+
+/* --- Modal Styles --- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 2000; }
+.modal-content { background: #e2e4e5; padding: 3rem; border-radius: 15px; position: relative; width: 90%; max-width: 600px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; color: #000; }
+.modal-header h2 { font-size: 2.5rem; font-weight: 800; }
+.close-btn { background: none; border: none; font-size: 2rem; cursor: pointer; color: #333; transition: color 0.2s ease; display: flex; align-items: center; justify-content: center; }
+.close-btn:hover { color: #000; }
+.modal-body { display: flex; flex-direction: column; gap: 1.5rem; }
+.modal-icons { display: flex; flex-direction: column; gap: 2rem; width: 100%; }
+.modal-icon-link { display: flex; align-items: center; gap: 1.5rem; text-decoration: none; color: #333; font-size: 1.1rem; font-weight: 500; transition: transform 0.2s ease, color 0.2s ease; }
+.modal-icon-link:hover { color: #000; transform: translateX(5px); }
+.icon-box { display: inline-flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: #ccc; border-radius: 5px; color: #000; font-size: 1.5rem; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); transition: background 0.2s ease; }
+.modal-icon-link:hover .icon-box { background: #bbb; }
+
+.fade-in { animation: simpleFade 0.3s ease-in-out; }
+@keyframes simpleFade { from { opacity: 0; } to { opacity: 1; } }
