@@ -37,3 +37,11 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
           allow_empty_commit: true
+
+      - name: Configure GitHub Pages source
+        run: |
+          curl -sS -X PUT \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/pages \
+            -d '{"source":{"branch":"gh-pages","path":"/"}}'
