@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import { FaAt, FaGithub, FaLinkedinIn, FaTimes } from 'react-icons/fa'; 
 import './App.css';
+import profileImage from '/your-photo.png';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -107,7 +108,7 @@ function App() {
       {activeSection !== 'projects' && (
         <div className="right-panel fade-in">
           <div className="image-wrapper">
-            <img src="/your-photo.png" alt="Profile" />
+            <img src={profileImage} alt="Profile" />
           </div>
         </div>
       )}
