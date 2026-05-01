@@ -48,7 +48,7 @@ function App() {
           <div className="content-section fade-in">
             <h2 className="section-title">About Me</h2>
             <p className="section-paragraph">
-                "Computer Engineering graduate and technical troubleshooter with a hands-on DIY approach to problem-solving. Skilled in IoT development, database management, and technical drafting. Proven ability to bridge the gap between complex engineering logic and creative multimedia storytelling."
+                Computer Engineering graduate and technical troubleshooter with a hands-on DIY approach to problem-solving. Skilled in IoT development, database management, and technical drafting. Proven ability to bridge the gap between complex engineering logic and creative multimedia storytelling.
             </p>
           </div>
         )}
