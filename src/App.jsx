@@ -48,7 +48,7 @@ function App() {
           <div className="content-section fade-in">
             <h2 className="section-title">About Me</h2>
             <p className="section-paragraph">
-              Innovative Computer Engineering graduate with a strong portfolio in end-to-end project execution, focusing on IoT systems, hardware-software integration, and technical drafting. Combines analytical skills with creative multimedia to deliver robust engineering solutions.
+                "Computer Engineering graduate and technical troubleshooter with a hands-on DIY approach to problem-solving. Skilled in IoT development, database management, and technical drafting. Proven ability to bridge the gap between complex engineering logic and creative multimedia storytelling."
             </p>
           </div>
         )}
